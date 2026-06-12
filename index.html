@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GameHubPortal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+  <h1>🎮 GameHubPortal</h1>
+  <input type="text" placeholder="Search games...">
+</header>
+
+<section class="hero">
+  <h2>Welcome to GameHubPortal</h2>
+  <p>Your gateway to unlimited gaming</p>
+</section>
+
+<section class="games">
+
+  <div class="card">
+    <img src="https://picsum.photos/300/180?1">
+    <div class="overlay">
+      <h3>Cyber Run</h3>
+      <button>Play</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300/180?2">
+    <div class="overlay">
+      <h3>Zombie War</h3>
+      <button>Play</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300/180?3">
+    <div class="overlay">
+      <h3>Speed Drift</h3>
+      <button>Play</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300/180?4">
+    <div class="overlay">
+      <h3>Space Battle</h3>
+      <button>Play</button>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+.bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00f7ff22, transparent 60%),
+              radial-gradient(circle, #ff00ff22, transparent 60%);
+  animation: move 12s linear infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-30%, -30%); }
+  100% { transform: translate(0,0); }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header h1 {
+  color: #00f7ff;
+  letter-spacing: 1px;
+}
+
+header input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  background: linear-gradient(90deg, #00f7ff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Games Grid */
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+  gap: 25px;
+}
+
+/* Game Card */
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 30px #00f7ff;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  text-align: center;
+}
+
+.overlay h3 {
+  margin-bottom: 10px;
+}
+
+.overlay button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00f7ff, #ff00ff);
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.overlay button:hover {
+  transform: scale(1.1);
+}
+console.log("GameHubPortal Loaded 🚀");
