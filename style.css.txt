@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Background */
+.bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00f7ff22, transparent 60%),
+              radial-gradient(circle, #ff00ff22, transparent 60%);
+  animation: move 12s linear infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-30%, -30%); }
+  100% { transform: translate(0,0); }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header h1 {
+  color: #00f7ff;
+}
+
+header input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  background: linear-gradient(90deg, #00f7ff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Grid */
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00f7ff;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  text-align: center;
+}
+
+.overlay button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #00f7ff;
+}
